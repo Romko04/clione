@@ -132,4 +132,14 @@ sliders.forEach((slider) => {
         console.log(e.target.value);
         container.style.setProperty('--position', `${e.target.value}%`);
     });
+
+    btn.addEventListener('touchend', (e) => {
+        console.log(e.target.value);
+        container.style.setProperty('--position', `${e.target.value}%`);
+    });
+
+    btn.addEventListener('mouseup', (e) => {
+        console.log(e.target.value);
+        container.style.setProperty('--position', `${e.target.value}%`);
+    });
 });
