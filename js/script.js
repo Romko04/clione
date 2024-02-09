@@ -135,7 +135,11 @@ sliders.forEach((slider) => {
             if (touching) {
                 const touchX = e.touches[0].clientX - container.getBoundingClientRect().left;
                 const sliderWidth = container.offsetWidth;
-                const newPosition = (touchX / sliderWidth) * 100;
+                let newPosition = (touchX / sliderWidth) * 100;
+    
+                // Обмеження на переміщення повзунка в межах контейнера
+                newPosition = Math.max(0, Math.min(100, newPosition));
+    
                 container.style.setProperty('--position', `${newPosition}%`);
                 btn.value = newPosition;
                 console.log(newPosition);
