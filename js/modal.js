@@ -78,7 +78,7 @@ function closePopup(form) {
 
 // Обробник кліків
 window.addEventListener('click', (e) => {
-    if (e.target.closest('.second--button')) {
+    if (e.target.closest('.single--button')) {
         const popup = document.querySelector('#single');
         openPopup(popup); // Відкриття попапу при кліку на .second--button
     }

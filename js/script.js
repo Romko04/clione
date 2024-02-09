@@ -47,23 +47,22 @@ const tickerItems = document.querySelectorAll('.ticker-animation');
 // Функція для оновлення прозорості елементів
 function updateOpacity() {
     tickerItems.forEach((item, index) => {
-        // Отримуємо розміри та положення контейнера та елемента
         const containerRect = item.parentElement.getBoundingClientRect();
         const itemRect = item.getBoundingClientRect();
-
-        // Обчислюємо відстань від лівого краю контейнера до лівого краю елемента
         const distanceFromLeft = itemRect.left - containerRect.left;
 
-        // Обчислюємо прозорість від 0 до 1 в залежності від відстані
-        let opacity = 1 - (distanceFromLeft / containerRect.width);
+        // Обчислюємо відсоток прогресу по шляху
+        const progress = distanceFromLeft / containerRect.width;
+
+        // Використовуємо квадратичну функцію для плавної зміни прозорості
+        let opacity = 1 - Math.pow(progress, 2);
         opacity = Math.max(opacity, 0.1);
 
-        // Задаємо стиль прозорості з використанням плавної анімації
-        item.style.transition = 'opacity 0.5s ease-in-out'; // Збільшуємо тривалість анімації і використовуємо згладжену функцію зміни швидкості
+        // Задаємо плавний перехід прозорості
+        item.style.transition = 'opacity 0.5s ease-in-out';
         item.style.opacity = opacity;
     });
 }
-
 // Викликаємо функцію оновлення прозорості
 updateOpacity();
 
@@ -78,6 +77,10 @@ function animate() {
 
 // Починаємо анімацію
 animate();
+
+
+
+
 // Event listeners
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('header__burger')) {

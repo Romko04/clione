@@ -429,7 +429,7 @@ body {
 
 .header__menu-items {
     display: flex;
-    gap: 3rem;
+    gap: 4.1rem;
 }
 
 .header__menu-items a {
@@ -503,7 +503,7 @@ body {
     height: 32rem;
     width: 100%;
     gap: 2.1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.1rem;
     width: 74.8rem;
 }
 
@@ -608,7 +608,7 @@ body {
     display: flex;
     width: 100%;
     background: transparent;
-    padding: 1rem 0;
+    padding: 3rem 0;
     /* justify-content: space-between; */
 }
 
