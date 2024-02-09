@@ -3,42 +3,42 @@ const menuBody = document.querySelector('.menu__body');
 
 const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-// if (!isMobileOrTablet) {
-//     // Отримуємо всі елементи меню з підменюшками
-//     let menuItems = document.querySelectorAll(".header__menu-item--catalog");
+if (!isMobileOrTablet) {
+    // Отримуємо всі елементи меню з підменюшками
+    let menuItems = document.querySelectorAll(".header__menu-item--catalog");
 
-//     // Проходимося по кожному елементу меню
-//     menuItems.forEach(function (menuItem) {
-//         let subMenu = menuItem.querySelector(".sub-menu");
-//         let timeout;
+    // Проходимося по кожному елементу меню
+    menuItems.forEach(function (menuItem) {
+        let subMenu = menuItem.querySelector(".sub-menu");
+        let timeout;
 
-//         // Функція для показу підменю
-//         function showSubMenu() {
-//             clearTimeout(timeout);
-//             subMenu.classList.add("active");
-//         }
+        // Функція для показу підменю
+        function showSubMenu() {
+            clearTimeout(timeout);
+            subMenu.classList.add("active");
+        }
 
-//         // Функція для приховування підменю
-//         function hideSubMenu() {
-//             timeout = setTimeout(function () {
-//                 subMenu.classList.remove("active");
-//             }, 300); // Затримка перед закриттям підменю (в мілісекундах)
-//         }
+        // Функція для приховування підменю
+        function hideSubMenu() {
+            timeout = setTimeout(function () {
+                subMenu.classList.remove("active");
+            }, 300); // Затримка перед закриттям підменю (в мілісекундах)
+        }
 
-//         // Додаємо обробники подій для кожного елементу меню
-//         menuItem.addEventListener("mouseenter", showSubMenu);
-//         menuItem.addEventListener("mouseleave", hideSubMenu);
+        // Додаємо обробники подій для кожного елементу меню
+        menuItem.addEventListener("mouseenter", showSubMenu);
+        menuItem.addEventListener("mouseleave", hideSubMenu);
 
-//         subMenu.addEventListener("mouseenter", showSubMenu);
-//         subMenu.addEventListener("mouseleave", function (event) {
-//             // Перевіряємо, чи курсор покинув підменю і не повертається на батьківський елемент меню
-//             if (!menuItem.contains(event.relatedTarget) && event.relatedTarget !== menuItem) {
-//                 hideSubMenu();
-//             }
-//         });
-//     });
+        subMenu.addEventListener("mouseenter", showSubMenu);
+        subMenu.addEventListener("mouseleave", function (event) {
+            // Перевіряємо, чи курсор покинув підменю і не повертається на батьківський елемент меню
+            if (!menuItem.contains(event.relatedTarget) && event.relatedTarget !== menuItem) {
+                hideSubMenu();
+            }
+        });
+    });
 
-// } 
+} 
 
 
 // Отримуємо всі елементи .ticker-animation
@@ -124,6 +124,11 @@ sliders.forEach((slider) => {
     const btn = container.querySelector('input[type="range"]');
 
     btn.addEventListener('input', (e) => {
+        console.log(e.target.value);
+        container.style.setProperty('--position', `${e.target.value}%`);
+    });
+
+    btn.addEventListener('change', (e) => {
         console.log(e.target.value);
         container.style.setProperty('--position', `${e.target.value}%`);
     });
