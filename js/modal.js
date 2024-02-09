@@ -119,25 +119,28 @@ quantityElements.forEach(quantityElement => {
     const plusBtn = quantityElement.querySelector('.plus');
     const input = quantityElement.querySelector('.quantity__input');
 
-    minusBtn.addEventListener('click', () => {
+    minusBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         let value = parseInt(input.value);
         value = isNaN(value) ? 0 : value;
         value = Math.max(value - 1, 0);
         input.value = value;
         if (value === 0) {
             // Якщо кількість стане 0 або від'ємною, видаляємо продукт
-            deleteProduct(quantityElement);
+            deleteProduct(e ,quantityElement);
         }
     });
 
-    plusBtn.addEventListener('click', () => {
+    plusBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         let value = parseInt(input.value);
         value = isNaN(value) ? 0 : value;
         input.value = value + 1;
     });
 });
 
-function deleteProduct(quantityElement) {
+function deleteProduct(e,quantityElement) {
+    e.preventDefault();
     // Видалення продукту або виконання вашої логіки
     // Наприклад:
     const productItem = quantityElement.closest('.product__item');

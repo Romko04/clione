@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>goods</title>
     <link rel="stylesheet" href="./css/swiper.css">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.16/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -22,8 +22,8 @@
                                 <a class="header__menu-link menu__link-active" href="#about">головна</a>
                             </li>
                             <li class="header__menu-item header__menu-item--catalog">
-                                <a class="header__menu-link menu--link" href="#services">каталог</a>
-                                <ul class="sub-menu ">
+                                <a class="header__menu-link menu--link  menu--link-catalog" href="#services">каталог</a>
+                                <ul class="sub-menu sub-menu--mobile">
                                     <li>
                                         <a href="">
                                             Clione Fit
@@ -95,6 +95,7 @@
             <section class="hero">
                 <div class="container hero__container">
                     <div class="hero__content">
+
                         <div class="hero__content-left">
                             <div class="hero__content-left__photoes">
                                 <img src="./img/hero/photo 1.jpg" alt="product">
@@ -115,13 +116,17 @@
                                 </div>
                                 <button class="button">Усі товари</button>
                             </div>
-                            <h1 class="title hero__title">
+                            <h1 class="title hero__title hero__desktop">
                                 Plamine, goods Fit,
                                 Meta LT - японська якість та результативність
                             </h1>
                         </div>
                         <div class="hero__content-right">
                             <img src="./img/hero/photo 4.jpg" alt="product">
+                            <h1 class="title hero__title hero__mobile">
+                                Plamine, goods Fit,
+                                Meta LT - японська якість та результативність
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -160,28 +165,38 @@
                 </div>
                 <div class="container about__container">
                     <div class="about__content">
-                        <div class="about__content-left">
-                            <img src="./img/about/photo 1.jpg" alt="product">
-                        </div>
-                        <div class="about__content-middle">
-                            <div class="about__content-middle__top">
-                                <h3 class="about__content-middle__top-title">
-                                    5+ років
-                                </h3>
-                                <p>
-                                    наша компанія займається продажем косметологічного обладнання та професійної
-                                    космецевтики для клінік естетичної
-                                    медицини і салонів краси.
-                                </p>
-                                <div class="about__content-middle__bottom">
-                                    <div class="about__content-middle__bottom-img">
-                                        <img src="./img/about/photo 2.jpg" alt="women">
+                        <div class="about__content-wrapper">
+                            <div class="about__content-left">
+                                <img src="./img/about/photo 1.jpg" alt="product">
+                            </div>
+                            <div class="about__content-middle">
+                                <div class="about__content-middle__top">
+                                    <h3 class="about__content-middle__top-title ">
+                                        5+ років
+                                    </h3>
+                                    <p>
+                                        наша компанія займається продажем косметологічного обладнання та професійної
+                                        космецевтики для клінік естетичної
+                                        медицини і салонів краси.
+                                    </p>
+                                    <div class="about__content-middle__bottom">
+                                        <div class="about__content-middle__bottom-img">
+                                            <img src="./img/about/photo 2.jpg" alt="women">
+                                        </div>
+                                        <button class="second--button">Більше про нас</button>
                                     </div>
-                                    <button class="second--button">Більше про нас</button>
                                 </div>
                             </div>
                         </div>
                         <div class="about__content-right">
+                            <h3 class="about__content-middle__top-title mobile">
+                                5+ років
+                            </h3>
+                            <p class="mobile">
+                                наша компанія займається продажем косметологічного обладнання та професійної
+                                космецевтики для клінік естетичної
+                                медицини і салонів краси.
+                            </p>
                             <div class="about__content-right__img">
                                 <img src="./img/about/photo 3.jpg" alt="women">
                             </div>
@@ -189,6 +204,9 @@
                                 Ми маємо повне розуміння, які процедури користуються попитом серед клієнтів салонів
                                 краси та що вони хочуть отримати, відвідуючи косметолога. 
                             </p>
+                            <div class="about__content-right__button-wrapper--mobile mobile">
+                                <button class="second--button">Більше про нас</button>
+                            </div>
                         </div>
 
                     </div>
@@ -227,6 +245,68 @@
                                 <button class="second--button">Замовити</button>
                                 <button class="button">Детальніше</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="metalt--mobile">
+                <h2 class="title metalt__mobile-title">
+                    meta lt
+                </h2>
+                <div class="container metalt--slider__container">
+                    <div class="swiper swiper--metalt swiper--pagination">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper__metalt-content">
+                                    <div class="swiper__metalt-img">
+                                        <img src="./img/product/photo.jpg" alt="product">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__metalt-content">
+                                    <div class="swiper__metalt-img">
+                                        <img src="./img/product/photo.jpg" alt="product">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__metalt-content">
+                                    <div class="swiper__metalt-img">
+                                        <img src="./img/product/photo.jpg" alt="product">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__metalt-content">
+                                    <div class="swiper__metalt-img">
+                                        <img src="./img/product/photo.jpg" alt="product">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__metalt-content">
+                                    <div class="swiper__metalt-img">
+                                        <img src="./img/product/photo.jpg" alt="product">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--custom"></div>
+                </div>
+                <div class="metalt__mobile-bottom">
+                    <div class="container">
+                        <h4 class="metalt__mobile-bottom__title">
+                            Пристрій для краси всього тіла
+                        </h4>
+                        <p class="metalt__mobile-bottom__text">
+                            Meta LT - новий багатофункціональний пристрій, який завдяки своїй технології, дає результат
+                            інтенсивного підтягування не тільки обличчя, а в цілому - всього тіла.
+                        </p>
+                        <div class="metalt__mobile-bottom__buttons">
+                            <button class="button">Замовити</button>
+                            <button class="second--button">Детальніше</button>
                         </div>
                     </div>
                 </div>
@@ -321,6 +401,100 @@
                     </div>
                 </div>
                 <div class="container comparator__container">
+                    <div class="swiper swiper--comparator__mobile">
+                        <div class="swiper-wrapper swiper-wrapper--comparator__mobile">
+                            <div class="swiper-slide">
+                                <div class="comparator__content">
+                                    <div class="containe">
+                                        <div class="image-container">
+                                            <img class="image-before slider-image" src="./img/beforeafter/before.jpg"
+                                                alt="">
+                                            <img class="image-after slider-image" src="./img/beforeafter/after.jpg"
+                                                alt="">
+                                        </div>
+                                        <input class="slider" type="range" min="0" max="100" value="50">
+                                        <div class="slider-line">
+
+                                        </div>
+                                        <div class="slider-button" aria-hidden="true">
+                                            <svg class="comparator__svg" viewBox="0 0 60 60" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.25" y="0.25" width="59.5" height="59.5" rx="19.75"
+                                                    fill="white" />
+                                                <rect x="0.25" y="0.25" width="59.5" height="59.5" rx="19.75"
+                                                    stroke="#202020" stroke-width="0.5" />
+                                                <path
+                                                    d="M36 30.0001C35.9951 29.474 35.7832 28.971 35.41 28.6001L31.12 24.3001C30.9326 24.1138 30.6792 24.0093 30.415 24.0093C30.1508 24.0093 29.8974 24.1138 29.71 24.3001C29.6163 24.393 29.5419 24.5036 29.4911 24.6255C29.4403 24.7474 29.4142 24.8781 29.4142 25.0101C29.4142 25.1421 29.4403 25.2728 29.4911 25.3946C29.5419 25.5165 29.6163 25.6271 29.71 25.7201L33 29.0001H23C22.7348 29.0001 22.4804 29.1054 22.2929 29.293C22.1054 29.4805 22 29.7348 22 30.0001C22 30.2653 22.1054 30.5196 22.2929 30.7072C22.4804 30.8947 22.7348 31.0001 23 31.0001H33L29.71 34.2901C29.5217 34.477 29.4154 34.7312 29.4144 34.9965C29.4135 35.2619 29.518 35.5168 29.705 35.7051C29.892 35.8934 30.1461 35.9997 30.4115 36.0006C30.6768 36.0016 30.9317 35.897 31.12 35.7101L35.41 31.4101C35.7856 31.0367 35.9978 30.5296 36 30.0001Z"
+                                                    fill="#202020" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="comparator__content">
+                                    <div class="containe">
+                                        <div class="image-container">
+                                            <img class="image-before slider-image" src="./img/beforeafter/before.jpg"
+                                                alt="">
+                                            <img class="image-after slider-image" src="./img/beforeafter/after.jpg"
+                                                alt="">
+                                        </div>
+                                        <input class="slider" type="range" min="0" max="100" value="50">
+                                        <div class="slider-line">
+
+                                        </div>
+                                        <div class="slider-button" aria-hidden="true">
+                                            <svg class="comparator__svg" viewBox="0 0 60 60" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.25" y="0.25" width="59.5" height="59.5" rx="19.75"
+                                                    fill="white" />
+                                                <rect x="0.25" y="0.25" width="59.5" height="59.5" rx="19.75"
+                                                    stroke="#202020" stroke-width="0.5" />
+                                                <path
+                                                    d="M36 30.0001C35.9951 29.474 35.7832 28.971 35.41 28.6001L31.12 24.3001C30.9326 24.1138 30.6792 24.0093 30.415 24.0093C30.1508 24.0093 29.8974 24.1138 29.71 24.3001C29.6163 24.393 29.5419 24.5036 29.4911 24.6255C29.4403 24.7474 29.4142 24.8781 29.4142 25.0101C29.4142 25.1421 29.4403 25.2728 29.4911 25.3946C29.5419 25.5165 29.6163 25.6271 29.71 25.7201L33 29.0001H23C22.7348 29.0001 22.4804 29.1054 22.2929 29.293C22.1054 29.4805 22 29.7348 22 30.0001C22 30.2653 22.1054 30.5196 22.2929 30.7072C22.4804 30.8947 22.7348 31.0001 23 31.0001H33L29.71 34.2901C29.5217 34.477 29.4154 34.7312 29.4144 34.9965C29.4135 35.2619 29.518 35.5168 29.705 35.7051C29.892 35.8934 30.1461 35.9997 30.4115 36.0006C30.6768 36.0016 30.9317 35.897 31.12 35.7101L35.41 31.4101C35.7856 31.0367 35.9978 30.5296 36 30.0001Z"
+                                                    fill="#202020" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="comparator__content">
+                                    <div class="containe">
+                                        <div class="image-container">
+                                            <img class="image-before slider-image" src="./img/beforeafter/before.jpg"
+                                                alt="">
+                                            <img class="image-after slider-image" src="./img/beforeafter/after.jpg"
+                                                alt="">
+                                        </div>
+                                        <input class="slider" type="range" min="0" max="100" value="50">
+                                        <div class="slider-line">
+
+                                        </div>
+                                        <div class="slider-button" aria-hidden="true">
+                                            <svg class="comparator__svg" viewBox="0 0 60 60" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.25" y="0.25" width="59.5" height="59.5" rx="19.75"
+                                                    fill="white" />
+                                                <rect x="0.25" y="0.25" width="59.5" height="59.5" rx="19.75"
+                                                    stroke="#202020" stroke-width="0.5" />
+                                                <path
+                                                    d="M36 30.0001C35.9951 29.474 35.7832 28.971 35.41 28.6001L31.12 24.3001C30.9326 24.1138 30.6792 24.0093 30.415 24.0093C30.1508 24.0093 29.8974 24.1138 29.71 24.3001C29.6163 24.393 29.5419 24.5036 29.4911 24.6255C29.4403 24.7474 29.4142 24.8781 29.4142 25.0101C29.4142 25.1421 29.4403 25.2728 29.4911 25.3946C29.5419 25.5165 29.6163 25.6271 29.71 25.7201L33 29.0001H23C22.7348 29.0001 22.4804 29.1054 22.2929 29.293C22.1054 29.4805 22 29.7348 22 30.0001C22 30.2653 22.1054 30.5196 22.2929 30.7072C22.4804 30.8947 22.7348 31.0001 23 31.0001H33L29.71 34.2901C29.5217 34.477 29.4154 34.7312 29.4144 34.9965C29.4135 35.2619 29.518 35.5168 29.705 35.7051C29.892 35.8934 30.1461 35.9997 30.4115 36.0006C30.6768 36.0016 30.9317 35.897 31.12 35.7101L35.41 31.4101C35.7856 31.0367 35.9978 30.5296 36 30.0001Z"
+                                                    fill="#202020" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper__buttons comparator__swiper-buttons">
+                        <div class="swiper__buttons-wrapper">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
                     <div class="comparator__content">
                         <div class="comparator__content-left">
                             <div class="containe content__comparator-left">
@@ -451,9 +625,7 @@
             <section class="products__slider">
                 <div class="container products__container">
                     <div class="swiper swiper--products">
-                        <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
-                            <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="swiper__slide-content">
                                     <div class="product__img">
@@ -595,8 +767,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- If we need navigation buttons -->
                     </div>
                     <div class="swiper__buttons">
                         <div class="swiper__buttons-wrapper">
@@ -676,7 +846,63 @@
                     </div>
                 </div>
             </section>
-            <div id="single" class="popup--single-product popup--form ">
+            <section class="instagram--mobile">
+                <div class="ticker ticker--instagram">
+                    <div class="ticker__wrapper">
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                        <div class="ticker-animation">
+                            <h6>instagram</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="container instagram--slider__container">
+                    <div class="swiper swiper--instagram swiper--pagination">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper__instagram-content">
+                                    <img src="./img/instagram/inst1.jpg" alt="photo with instagram">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__instagram-content">
+                                    <img src="./img/instagram/inst1.jpg" alt="photo with instagram">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__instagram-content">
+                                    <img src="./img/instagram/inst1.jpg" alt="photo with instagram">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination--instagram swiper-pagination--custom"></div>
+                </div>
+            </section>
+
+            <div id="single" class="popup--form popup--single-product  ">
                 <div class="popup__body">
                     <div class="popup__content">
                         <a class="popup__close" href="">
@@ -691,11 +917,9 @@
                         <div class="popup__content--single">
                             <div class="popup__gallery">
                                 <div class="popup__main-photo">
-                                    <!-- Основне фото -->
                                     <img src="./img/product/photo.jpg" alt="Main Photo">
                                 </div>
                                 <div class="popup__thumbnails">
-                                    <!-- Нижні фотографії -->
                                     <div class="popup__thumbnail">
                                         <img src="./img/product/photo2.jpg" alt="Thumbnail 1">
                                     </div>
@@ -757,7 +981,7 @@
                 </div>
             </div>
 
-            <div id="cart" class="popup--single-product popup--form ">
+            <div id="cart" class=" popup--form cart--form">
                 <div class="popup__body">
                     <div class="popup__content">
                         <a class="popup__close" href="">
@@ -788,22 +1012,34 @@
                                                         </a>
                                                     </h4>
                                                     <span>$85</span>
+                                                    <div class="product__content--mobile">
+                                                        <div class="">
+                                                            <span>$85</span>
+                                                            <a href="">Видалити</a>
+                                                        </div>
+                                                        <div class="product__quantity">
+                                                            <button class="quantity__btn minus">
+                                                                <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
+                                                            </button>
+                                                            <input type="text" class="quantity__input" value="1">
+                                                            <button class="quantity__btn plus">
+                                                                <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="product__quantity">
                                                     <button class="quantity__btn minus">
-                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg"
-                                                            alt="plus icon">
+                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
                                                     </button>
                                                     <input type="text" class="quantity__input" value="1">
                                                     <button class="quantity__btn plus">
-                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg"
-                                                            alt="minus icon">
+                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
                                                     </button>
                                                 </div>
                                                 <p class="product__total">$10.99</p>
                                                 <button class="product__delete">
                                                     <img src="./img/cart/cancel.svg" alt="cancel icon">
-
                                                 </button>
                                             </div>
                                         </div>
@@ -821,22 +1057,34 @@
                                                         </a>
                                                     </h4>
                                                     <span>$85</span>
+                                                    <div class="product__content--mobile">
+                                                        <div class="">
+                                                            <span>$85</span>
+                                                            <a href="">Видалити</a>
+                                                        </div>
+                                                        <div class="product__quantity">
+                                                            <button class="quantity__btn minus">
+                                                                <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
+                                                            </button>
+                                                            <input type="text" class="quantity__input" value="1">
+                                                            <button class="quantity__btn plus">
+                                                                <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="product__quantity">
                                                     <button class="quantity__btn minus">
-                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg"
-                                                            alt="plus icon">
+                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
                                                     </button>
                                                     <input type="text" class="quantity__input" value="1">
                                                     <button class="quantity__btn plus">
-                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg"
-                                                            alt="minus icon">
+                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
                                                     </button>
                                                 </div>
                                                 <p class="product__total">$10.99</p>
                                                 <button class="product__delete">
                                                     <img src="./img/cart/cancel.svg" alt="cancel icon">
-
                                                 </button>
                                             </div>
                                         </div>
@@ -854,22 +1102,34 @@
                                                         </a>
                                                     </h4>
                                                     <span>$85</span>
+                                                    <div class="product__content--mobile">
+                                                        <div class="">
+                                                            <span>$85</span>
+                                                            <a href="">Видалити</a>
+                                                        </div>
+                                                        <div class="product__quantity">
+                                                            <button class="quantity__btn minus">
+                                                                <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
+                                                            </button>
+                                                            <input type="text" class="quantity__input" value="1">
+                                                            <button class="quantity__btn plus">
+                                                                <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="product__quantity">
                                                     <button class="quantity__btn minus">
-                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg"
-                                                            alt="plus icon">
+                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
                                                     </button>
                                                     <input type="text" class="quantity__input" value="1">
                                                     <button class="quantity__btn plus">
-                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg"
-                                                            alt="minus icon">
+                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
                                                     </button>
                                                 </div>
                                                 <p class="product__total">$10.99</p>
                                                 <button class="product__delete">
                                                     <img src="./img/cart/cancel.svg" alt="cancel icon">
-
                                                 </button>
                                             </div>
                                         </div>
@@ -887,22 +1147,79 @@
                                                         </a>
                                                     </h4>
                                                     <span>$85</span>
+                                                    <div class="product__content--mobile">
+                                                        <div class="">
+                                                            <span>$85</span>
+                                                            <a href="">Видалити</a>
+                                                        </div>
+                                                        <div class="product__quantity">
+                                                            <button class="quantity__btn minus">
+                                                                <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
+                                                            </button>
+                                                            <input type="text" class="quantity__input" value="1">
+                                                            <button class="quantity__btn plus">
+                                                                <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="product__quantity">
                                                     <button class="quantity__btn minus">
-                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg"
-                                                            alt="plus icon">
+                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
                                                     </button>
                                                     <input type="text" class="quantity__input" value="1">
                                                     <button class="quantity__btn plus">
-                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg"
-                                                            alt="minus icon">
+                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
                                                     </button>
                                                 </div>
                                                 <p class="product__total">$10.99</p>
                                                 <button class="product__delete">
                                                     <img src="./img/cart/cancel.svg" alt="cancel icon">
-
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="product__item">
+                                            <div class="product__image">
+                                                <a href="">
+                                                    <img src="./img/product/photo2.jpg" alt="product image">
+                                                </a>
+                                            </div>
+                                            <div class="product__info">
+                                                <div class="product__info-left">
+                                                    <h4 class="product__title">
+                                                        <a href="">
+                                                            Plamine Essence Зволожуча сироватка 30 мл
+                                                        </a>
+                                                    </h4>
+                                                    <span>$85</span>
+                                                    <div class="product__content--mobile">
+                                                        <div class="">
+                                                            <span>$85</span>
+                                                            <a href="">Видалити</a>
+                                                        </div>
+                                                        <div class="product__quantity">
+                                                            <button class="quantity__btn minus">
+                                                                <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
+                                                            </button>
+                                                            <input type="text" class="quantity__input" value="1">
+                                                            <button class="quantity__btn plus">
+                                                                <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product__quantity">
+                                                    <button class="quantity__btn minus">
+                                                        <img class="svg__minus cart__icon" src="./img/cart/minus.svg" alt="plus icon">
+                                                    </button>
+                                                    <input type="text" class="quantity__input" value="1">
+                                                    <button class="quantity__btn plus">
+                                                        <img class="svg__plus cart__icon" src="./img/cart/plus.svg" alt="minus icon">
+                                                    </button>
+                                                </div>
+                                                <p class="product__total">$10.99</p>
+                                                <button class="product__delete">
+                                                    <img src="./img/cart/cancel.svg" alt="cancel icon">
                                                 </button>
                                             </div>
                                         </div>
@@ -914,7 +1231,8 @@
                                 <div class="cart__inputs-wrapper">
                                     <div class="input__wrapper">
                                         <label for="name">Ваше імʼя</label>
-                                        <input id="name" class="cart__input cart__input-name" type="text" placeholder="Введіть ваше імʼя">
+                                        <input id="name" class="cart__input cart__input-name" type="text"
+                                            placeholder="Введіть ваше імʼя">
                                     </div>
                                     <div class="input__wrapper">
                                         <label for="phone">Номер телефону</label>
@@ -925,9 +1243,10 @@
                                 </div>
                                 <div class="cart__buttons-wrapper">
                                     <p>
-                                        Натискаючи кнопку, ви даєте згоду на обробку персональних даних і погоджуєтесь з політикою конфіденційності
+                                        Натискаючи кнопку, ви даєте згоду на обробку персональних даних і погоджуєтесь
+                                        з політикою конфіденційності
                                     </p>
-                                    <button  class="button--submit">
+                                    <button class="button--submit">
                                         Оформити замовлення
                                     </button>
                                 </div>
@@ -952,8 +1271,8 @@
                         <ul class="footer__menu">
                             <li><a href="">головна</a></li>
                             <li class="header__menu-item--catalog">
-                                <a class="menu--link" href="">каталог</a>
-                                <ul class="sub-menu">
+                                <a class="menu--link menu--link-catalog" href="">каталог</a>
+                                <ul class="sub-menu sub-menu--mobile">
                                     <li>
                                         <a href="">
                                             Clione Fit
@@ -1022,12 +1341,12 @@
                 </div>
             </div>
         </footer>
-        <h1 style="text-align: center">Show Instagram Feed on your Website</h1>
-        <div id="instafeed-container"></div>
     </div>
-    <script defer src="./js/swiper.js"></script>
+    <!-- <script defer src="./js/swiper.js"></script> -->
     <script defer src="./js/script.js"></script>
-    <script defer src="./js/languages.js"></script>
+    <!-- <script defer src="./js/sliders.js"></script>
+        -->
+    <script defer src="./js/languages.js"></script> 
     <script defer src="./js/modal.js"></script>
 </body>
 

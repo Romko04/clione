@@ -1,54 +1,44 @@
 const menuBody = document.querySelector('.menu__body');
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    slidesPerView: 4.1,
-    spaceBetween: 20,
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
 
-});
+const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-// Отримуємо всі елементи меню з підменюшками
-let menuItems = document.querySelectorAll(".header__menu-item--catalog");
+// if (!isMobileOrTablet) {
+//     // Отримуємо всі елементи меню з підменюшками
+//     let menuItems = document.querySelectorAll(".header__menu-item--catalog");
 
-// Проходимося по кожному елементу меню
-menuItems.forEach(function (menuItem) {
-    let subMenu = menuItem.querySelector(".sub-menu");
-    let timeout;
+//     // Проходимося по кожному елементу меню
+//     menuItems.forEach(function (menuItem) {
+//         let subMenu = menuItem.querySelector(".sub-menu");
+//         let timeout;
 
-    // Функція для показу підменю
-    function showSubMenu() {
-        clearTimeout(timeout);
-        subMenu.classList.add("active");
-    }
+//         // Функція для показу підменю
+//         function showSubMenu() {
+//             clearTimeout(timeout);
+//             subMenu.classList.add("active");
+//         }
 
-    // Функція для приховування підменю
-    function hideSubMenu() {
-        timeout = setTimeout(function () {
-            subMenu.classList.remove("active");
-        }, 300); // Затримка перед закриттям підменю (в мілісекундах)
-    }
+//         // Функція для приховування підменю
+//         function hideSubMenu() {
+//             timeout = setTimeout(function () {
+//                 subMenu.classList.remove("active");
+//             }, 300); // Затримка перед закриттям підменю (в мілісекундах)
+//         }
 
-    // Додаємо обробники подій для кожного елементу меню
-    menuItem.addEventListener("mouseenter", showSubMenu);
-    menuItem.addEventListener("mouseleave", hideSubMenu);
+//         // Додаємо обробники подій для кожного елементу меню
+//         menuItem.addEventListener("mouseenter", showSubMenu);
+//         menuItem.addEventListener("mouseleave", hideSubMenu);
 
-    subMenu.addEventListener("mouseenter", showSubMenu);
-    subMenu.addEventListener("mouseleave", function (event) {
-        // Перевіряємо, чи курсор покинув підменю і не повертається на батьківський елемент меню
-        if (!menuItem.contains(event.relatedTarget) && event.relatedTarget !== menuItem) {
-            hideSubMenu();
-        }
-    });
-});
+//         subMenu.addEventListener("mouseenter", showSubMenu);
+//         subMenu.addEventListener("mouseleave", function (event) {
+//             // Перевіряємо, чи курсор покинув підменю і не повертається на батьківський елемент меню
+//             if (!menuItem.contains(event.relatedTarget) && event.relatedTarget !== menuItem) {
+//                 hideSubMenu();
+//             }
+//         });
+//     });
+
+// } 
 
 
 // Отримуємо всі елементи .ticker-animation
@@ -90,30 +80,35 @@ function animate() {
 animate();
 // Event listeners
 document.addEventListener('click', (e) => {
-    e.preventDefault()
-    if (e.target.classList.contains('anchor')) {
-        anchorClick(e.target)
-    }
     if (e.target.classList.contains('header__burger')) {
+         e.preventDefault()
         toggleMenu()
+    }
+
+    if (isMobileOrTablet) {
+        if (e.target.closest('.menu--link-catalog')) {
+            e.preventDefault()
+            e.target.classList.toggle('active');
+            let nextElement = e.target.nextElementSibling;
+            if (nextElement) {
+                if (e.target.classList.contains('active')) {
+                    nextElement.style.padding = '2rem 3rem';
+                    nextElement.style.marginTop = '2rem';
+                    let totalHeight = nextElement.scrollHeight + 60
+                    nextElement.style.maxHeight = (totalHeight / 10) + 'rem';
+                } else {
+                    nextElement.style.padding = '0';
+                    nextElement.style.marginTop = '0';
+                    nextElement.style.maxHeight = '0';
+                }
+                nextElement.classList.toggle('active');
+            }
+        }
     }
 })
 
 
-function anchorClick(e) {
-    const activeAnchor = document.querySelector('.menu__link-active')
-    activeAnchor.classList.remove('menu__link-active')
-    e.classList.add('menu__link-active')
-    if (menuBody.classList.contains('active')) {
-        toggleMenu()
-    }
-    const blockId = e.getAttribute('href')
-    document.querySelector('' + blockId).scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-    })
-}
+
 function toggleMenu() {
     const btn = document.querySelector('.header__burger');
     menuBody.classList.toggle('active');
