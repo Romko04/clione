@@ -128,18 +128,29 @@ sliders.forEach((slider) => {
         container.style.setProperty('--position', `${e.target.value}%`);
     });
 
-    btn.addEventListener('change', (e) => {
-        console.log(e.target.value);
-        container.style.setProperty('--position', `${e.target.value}%`);
-    });
-
-    btn.addEventListener('touchend', (e) => {
-        console.log(e.target.value);
-        container.style.setProperty('--position', `${e.target.value}%`);
-    });
-
-    btn.addEventListener('mouseup', (e) => {
-        console.log(e.target.value);
-        container.style.setProperty('--position', `${e.target.value}%`);
-    });
+        let touching = false;
+    
+        // Функція для обробки події touchmove
+        const handleTouchMove = (e) => {
+            if (touching) {
+                const touchX = e.touches[0].clientX - container.getBoundingClientRect().left;
+                const sliderWidth = container.offsetWidth;
+                const newPosition = (touchX / sliderWidth) * 100;
+                container.style.setProperty('--position', `${newPosition}%`);
+                btn.value = newPosition;
+                console.log(newPosition);
+            }
+        };
+    
+        // Додати події touchstart і touchend
+        btn.addEventListener('touchstart', () => {
+            touching = true;
+        });
+    
+        btn.addEventListener('touchend', () => {
+            touching = false;
+        });
+    
+        // Додати подію touchmove на контейнер
+        container.addEventListener('touchmove', handleTouchMove);
 });
