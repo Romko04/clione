@@ -44,7 +44,7 @@ const swiper3 = new Swiper('.swiper--metalt', {
     slidesPerView: 1,
     // If we need pagination
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination--metalt',
     },
 });
 

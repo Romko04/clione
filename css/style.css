@@ -623,11 +623,10 @@ body {
     text-transform: uppercase;
     animation: trickerAnimation 4s linear infinite;
     -webkit-animation: trickerAnimation 4s linear infinite;
-
     position: relative;
-
+    -webkit-backface-visibility: hidden; /* For hardware acceleration */
+    backface-visibility: hidden; /* For hardware acceleration */
 }
-
 .ticker-animation h6 {
     font-family: var(--font-family);
     font-weight: 700;
@@ -2616,7 +2615,7 @@ body {
         margin-bottom: 2rem;
     }
     .popup__body{
-        padding: 8rem 1rem;
+        padding: 1rem 1rem;
     }
     .cart--form .popup__content{
         padding-top: 5rem;
