@@ -38,7 +38,7 @@ if (!isMobileOrTablet) {
         });
     });
 
-} 
+}
 
 
 // Отримуємо всі елементи .ticker-animation
@@ -84,9 +84,23 @@ animate();
 // Event listeners
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('header__burger')) {
-         e.preventDefault()
+        e.preventDefault()
         toggleMenu()
     }
+    // if (e.target.closest('.accordion')) {
+    //     let accordion = e.target;
+    //     accordion.classList.toggle('active');
+  
+    //     let panel = accordion.nextElementSibling;
+    //     if (panel.style.maxHeight) {
+    //       panel.style.maxHeight = null;
+    //       panel.style.marginBottom = 0
+    //     } else {
+    //       panel.style.maxHeight = panel.scrollHeight + 'px';
+    //       panel.style.marginBottom = '2' + 'rem';
+  
+    //     }
+    //   }
 
     if (isMobileOrTablet) {
         if (e.target.closest('.menu--link-catalog')) {
@@ -127,37 +141,62 @@ sliders.forEach((slider) => {
     const btn = container.querySelector('input[type="range"]');
 
     btn.addEventListener('input', (e) => {
-        console.log(e.target.value);
         container.style.setProperty('--position', `${e.target.value}%`);
     });
 
-        let touching = false;
-    
-        // Функція для обробки події touchmove
-        const handleTouchMove = (e) => {
-            if (touching) {
-                const touchX = e.touches[0].clientX - container.getBoundingClientRect().left;
-                const sliderWidth = container.offsetWidth;
-                let newPosition = (touchX / sliderWidth) * 100;
-    
-                // Обмеження на переміщення повзунка в межах контейнера
-                newPosition = Math.max(0, Math.min(100, newPosition));
-    
-                container.style.setProperty('--position', `${newPosition}%`);
-                btn.value = newPosition;
-                console.log(newPosition);
-            }
-        };
-    
-        // Додати події touchstart і touchend
-        btn.addEventListener('touchstart', () => {
-            touching = true;
-        });
-    
-        btn.addEventListener('touchend', () => {
-            touching = false;
-        });
-    
-        // Додати подію touchmove на контейнер
-        container.addEventListener('touchmove', handleTouchMove);
+    let touching = false;
+
+    // Функція для обробки події touchmove
+    const handleTouchMove = (e) => {
+        if (touching) {
+            const touchX = e.touches[0].clientX - container.getBoundingClientRect().left;
+            const sliderWidth = container.offsetWidth;
+            let newPosition = (touchX / sliderWidth) * 100;
+
+            // Обмеження на переміщення повзунка в межах контейнера
+            newPosition = Math.max(0, Math.min(100, newPosition));
+
+            container.style.setProperty('--position', `${newPosition}%`);
+            btn.value = newPosition;
+            console.log(newPosition);
+        }
+    };
+
+    // Додати події touchstart і touchend
+    btn.addEventListener('touchstart', () => {
+        touching = true;
+    });
+
+    btn.addEventListener('touchend', () => {
+        touching = false;
+    });
+
+    // Додати подію touchmove на контейнер
+    container.addEventListener('touchmove', handleTouchMove);
 });
+
+
+const playButton = document.querySelector('.play-button');
+const video = document.getElementById('my-video');
+
+if (playButton) {
+    playButton.addEventListener('click', function () {
+        playButton.classList.toggle('active');
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+}
+
+if (video) {
+    video.addEventListener('play', function () {
+        playButton.classList.add('active');
+    });
+    
+    video.addEventListener('pause', function () {
+        playButton.classList.remove('active');
+    });
+}
+
