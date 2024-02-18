@@ -137,3 +137,19 @@ if (swiperElement9) {
 }
 
 
+const swiperElement10 = document.querySelector('.swiper--cooperation')
+
+if (swiperElement10) {
+    const swiper10 = new Swiper(swiperElement10, {
+        slidesPerView: 6,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next--cooperation',
+            prevEl: '.swiper-button-prev--cooperation',
+        },
+    });
+}
+
+
+
+

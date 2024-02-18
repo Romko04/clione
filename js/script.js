@@ -87,20 +87,18 @@ document.addEventListener('click', (e) => {
         e.preventDefault()
         toggleMenu()
     }
-    // if (e.target.closest('.accordion')) {
-    //     let accordion = e.target;
-    //     accordion.classList.toggle('active');
+    if (e.target.closest('.accordeon__wrapper')) {
+        let wrapper = e.target.closest('.accordeon__wrapper')
+        let accordion = wrapper.querySelector('.accordion');
+        wrapper.classList.toggle('active');
   
-    //     let panel = accordion.nextElementSibling;
-    //     if (panel.style.maxHeight) {
-    //       panel.style.maxHeight = null;
-    //       panel.style.marginBottom = 0
-    //     } else {
-    //       panel.style.maxHeight = panel.scrollHeight + 'px';
-    //       panel.style.marginBottom = '2' + 'rem';
-  
-    //     }
-    //   }
+        let panel = accordion.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      }
 
     if (isMobileOrTablet) {
         if (e.target.closest('.menu--link-catalog')) {
