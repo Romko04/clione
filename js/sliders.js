@@ -57,12 +57,20 @@ if (swiperElement4) {
 const swiperElement5 = document.querySelector('.reviews__slider');
 if (swiperElement5) {
     const swiper5 = new Swiper(swiperElement5, {
-        slidesPerView: 4,
-        spaceBetween: 20,
+        slidesPerView: 1,
+        spaceBetween: 10,
         navigation: {
             nextEl: '.swiper-button-next--reviews',
             prevEl: '.swiper-button-prev--reviews',
         },
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            }
+        }
     });
 }
 
@@ -149,6 +157,50 @@ if (swiperElement10) {
         },
     });
 }
+
+
+const swiperElement11 = document.querySelector('.advantages__slider--mobile')
+
+if (swiperElement11) {
+    const swiper11 = new Swiper(swiperElement11, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next--advantages',
+            prevEl: '.swiper-button-prev--advantages',
+        },
+    });
+}
+
+
+const swiperElement12 = document.querySelector('.recommend__slider--mobile')
+
+if (swiperElement12) {
+    const swiper12 = new Swiper(swiperElement12, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next--recommend',
+            prevEl: '.swiper-button-prev--recommend',
+        },
+    });
+}
+
+
+const swiperElement13 = document.querySelector('.characteristics__slider--mobile')
+
+if (swiperElement13) {
+    const swiper13 = new Swiper(swiperElement13, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination--characteristics',
+        },
+    });
+}
+
+
+
 
 
 

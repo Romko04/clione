@@ -40,6 +40,18 @@ if (!isMobileOrTablet) {
 
 }
 
+// const tickerItems = document.querySelectorAll('.ticker-animation');
+
+// function updateOpacity() {
+//     tickerItems.forEach(function(item) {
+//         const rect = item.getBoundingClientRect();
+//         const rightVisibilityPercentage = ((window.innerWidth - rect.right) / window.innerWidth) * 100;
+//         item.style.opacity = rightVisibilityPercentage / 100;
+//     });
+// }
+
+//     updateOpacity();
+
 
 // Отримуємо всі елементи .ticker-animation
 const tickerItems = document.querySelectorAll('.ticker-animation');
