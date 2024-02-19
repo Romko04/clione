@@ -149,12 +149,18 @@ const swiperElement10 = document.querySelector('.swiper--cooperation')
 
 if (swiperElement10) {
     const swiper10 = new Swiper(swiperElement10, {
-        slidesPerView: 6,
+        slidesPerView: 1,
         spaceBetween: 10,
         navigation: {
             nextEl: '.swiper-button-next--cooperation',
             prevEl: '.swiper-button-prev--cooperation',
         },
+        breakpoints: {
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+            }
+        }
     });
 }
 
@@ -198,6 +204,47 @@ if (swiperElement13) {
         },
     });
 }
+
+
+const swiperElement14 = document.querySelector('.recommend__slider--mobile-2')
+
+if (swiperElement14) {
+    const swiper14 = new Swiper(swiperElement14, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next--recommend-2',
+            prevEl: '.swiper-button-prev--recommend-2',
+        },
+    });
+}
+
+
+const swiperElement15 = document.querySelector('.payment__slider--mobile')
+
+if (swiperElement15) {
+    const swiper15 = new Swiper(swiperElement15, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination--payment',
+        },
+    });
+}
+
+const swiperElement16 = document.querySelector('.delivery__slider--mobile')
+
+if (swiperElement16) {
+    const swiper16 = new Swiper(swiperElement16, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination--delivery',
+        },
+    });
+}
+
+
 
 
 
