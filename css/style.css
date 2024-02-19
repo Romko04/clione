@@ -2638,6 +2638,9 @@ body {
 .brands {
     margin-top: 22rem;
 }
+.brands__content-left__list-item:first-child{
+    display: none;
+}
 
 .brands__content {
     display: flex;
