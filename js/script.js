@@ -66,12 +66,13 @@ function updateOpacity() {
 updateOpacity();
 
 
+const verticalTextSpans = document.querySelectorAll('.vertical-text > span');
 
+// Викликаємо функцію один раз при завантаженні сторінки, щоб ініціалізувати прозорість
+if (verticalTextSpans) updateOpacityVertical()
 
 // Анімація для вертикальних бігучих строк
 function updateOpacityVertical() {
-    const verticalTextSpans = document.querySelectorAll('.vertical-text > span');
-    const containerHeight = document.querySelector('.goods__content').offsetHeight;
 
     verticalTextSpans.forEach((item, index) => {
         const containerRect = item.parentElement.getBoundingClientRect();
@@ -92,8 +93,6 @@ function updateOpacityVertical() {
 }
 
 
-// Викликаємо функцію один раз при завантаженні сторінки, щоб ініціалізувати прозорість
-updateOpacityVertical();
 
 
 // Event listeners
