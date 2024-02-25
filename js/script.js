@@ -101,6 +101,18 @@ document.addEventListener('click', (e) => {
         e.preventDefault()
         toggleMenu()
     }
+    //new
+    if (e.target.closest('.plamine__about-list__item')) {
+        let wrapper = e.target.closest('.plamine__about-list__item')
+        let accordion = wrapper.querySelector('.plamine__about-list__item-text');
+        wrapper.classList.toggle('active')
+        if (accordion.style.maxHeight) {
+            accordion.style.maxHeight = null;
+        } else {
+            accordion.style.maxHeight = accordion.scrollHeight + 'px';
+        }
+    }
+
     if (e.target.closest('.accordeon__wrapper')) {
         let wrapper = e.target.closest('.accordeon__wrapper')
         let accordion = wrapper.querySelector('.accordion');

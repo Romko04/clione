@@ -82,7 +82,8 @@ window.addEventListener('click', (e) => {
         const popup = document.querySelector('#single');
         openPopup(popup); // Відкриття попапу при кліку на .second--button
     }
-    if (e.target.closest('.cart--button')) {
+    if (e.target.closest('.cart--button') || e.target.closest('.cart')) {
+        e.preventDefault()
         const popup = document.querySelector('#cart');
         openPopup(popup); // Відкриття попапу при кліку на .second--button
     }

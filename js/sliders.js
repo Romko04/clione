@@ -38,6 +38,7 @@ const swiperElement3 = document.querySelector('.swiper--metalt');
 if (swiperElement3) {
     const swiper3 = new Swiper(swiperElement3, {
         slidesPerView: 1,
+        spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination--metalt',
         },
@@ -48,6 +49,7 @@ const swiperElement4 = document.querySelector('.swiper--instagram');
 if (swiperElement4) {
     const swiper4 = new Swiper(swiperElement4, {
         slidesPerView: 1,
+        spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination--instagram',
         },
@@ -157,8 +159,8 @@ if (swiperElement10) {
         },
         breakpoints: {
             1024: {
-                slidesPerView: 6,
-                spaceBetween: 10,
+                slidesPerView: 6.2,
+                spaceBetween: 20,
             }
         }
     });
@@ -250,24 +252,24 @@ if (swiperElement16) {
     });
 }
 
-// const swiperElement17 = document.querySelector('.recommend__slider--desk')
+const swiperElement17 = document.querySelector('.partners__slider')
 
-// if (swiperElement17) {
-//     const swiper17 = new Swiper(swiperElement17, {
-//         slidesPerView: 1,
-//         spaceBetween: 10,
-//         navigation: {
-//             nextEl: '.swiper-button-next--recommend--desk',
-//             prevEl: '.swiper-button-prev--recommend--desk',
-//         },
-//         breakpoints: {
-//             1024: {
-//                 slidesPerView: 4,
-//                 spaceBetween: 20,
-//             },
-//         }
-//     });
-// }
+if (swiperElement17) {
+    const swiper17 = new Swiper(swiperElement17, {
+        slidesPerView: 1.4,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next--partners',
+            prevEl: '.swiper-button-prev--partners',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4.1,
+                spaceBetween: 20,
+            },
+        }
+    });
+}
 
 
 
