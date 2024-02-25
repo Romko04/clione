@@ -3281,6 +3281,9 @@ display: none;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
+.metalt__about-list .about-specifications__list{
+    margin-bottom: 0;
+}
 
 .metalt__about-list__item {
     padding: 10rem 7rem;
