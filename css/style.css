@@ -5253,7 +5253,7 @@ display: none;
     }
     .swiper-slide{
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         height: auto;
     }
 
