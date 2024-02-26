@@ -119,6 +119,7 @@ const swiperElement8 = document.querySelector('.products__slider--plamine__video
 if (swiperElement8) {
     const swiper8 = new Swiper(swiperElement8, {
         slidesPerView: 1,
+        spaceBetween: 10,
         navigation: {
             nextEl: '.swiper-button-next--videos',
             prevEl: '.swiper-button-prev--videos',

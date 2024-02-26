@@ -5754,7 +5754,7 @@ display: none;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    .swiper-slide .swiper__metalt-content{
+    .swiper__metalt-content,.characteristics__content,.payment__content{
         width: 100%;
     }
 
