@@ -72,9 +72,11 @@ function closePopup(form) {
 
     form.classList.remove('active');
     if (menu.classList.contains('active')) {
+        openPopupsCount--;
         return
     }
-    openPopupsCount--; // Зменшуємо лічильник відкритих попапів
+     // Зменшуємо лічильник відкритих попапів
+     openPopupsCount--;
     if (openPopupsCount === 0) {
         body.classList.remove('body--lock'); // Відкриваємо скрол, якщо всі попапи закриті
     }
