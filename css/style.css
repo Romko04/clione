@@ -663,6 +663,7 @@ footer .socials img {
 
 .about__content {
     display: flex;
+    justify-content: space-between;
 }
 
 .about__content-left {
@@ -677,6 +678,9 @@ footer .socials img {
 
 .about__content-middle {
     width: 56.4rem;
+}
+.about__content-middle--partneram{
+    width: 36.6rem;
 }
 
 .about__content-middle__top {
@@ -763,6 +767,9 @@ footer .socials img {
     display: flex;
     flex-direction: column;
     margin-left: 5rem;
+}
+.about__content-right--partneram{
+    width: 63rem;
 }
 
 .about__content-right .mobile {
@@ -880,7 +887,7 @@ footer .socials img {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 2.6rem;
-    line-height: 100%;
+    line-height: 130%;
     text-align: center;
     color: var(--default-black);
     text-align: left;
@@ -3131,6 +3138,12 @@ display: none;
     color: var(--default-black);
 }
 
+.plamine__company-content__right-bottom__title, .plamine__company-content__left-top__title{
+    font-size: 4.2rem;
+    text-align: center;
+    max-width: 59rem;
+    margin: 0 auto;
+}
 
 
 
@@ -3252,6 +3265,7 @@ display: none;
 .plamine__company .about-specifications__list {
     grid-template-columns: 1fr;
     margin-top: 4rem;
+    margin-bottom: 0;
 }
 
 .plamine__company-content__right-img__wrapper,
@@ -3320,7 +3334,8 @@ display: none;
 
 .metalt__about-list__title {
     font-size: 4.2rem;
-    margin: 8rem 0 4rem;
+    margin: 8rem auto 4rem;
+    max-width: 50rem;
 }
 
 .metalt__star-wrapper {
@@ -5073,6 +5088,7 @@ display: none;
     .metalt__about-list__title {
         font-size: 4.2rem;
         margin: 4rem 0 4rem;
+        max-width: 28rem;
     }
 
     .metalt__about-list__title {
@@ -5396,6 +5412,7 @@ display: none;
     .plamine__company-content__right {
         flex-direction: column-reverse;
     }
+
 
     .plamine__company-content__right-img__wrapper,
     .plamine__company-content__left-img__wrapper {
