@@ -52,6 +52,7 @@ const iti = window.intlTelInput(input, {
 
 
 let openPopupsCount = 0; // Лічильник відкритих попапів
+const menu = document.querySelector('.menu__body')
 
 // Функція для відкриття попапу
 function openPopup(form) {
@@ -70,6 +71,9 @@ function closePopup(form) {
     const body = document.querySelector('body');
 
     form.classList.remove('active');
+    if (menu.classList.contains('active')) {
+        return
+    }
     openPopupsCount--; // Зменшуємо лічильник відкритих попапів
     if (openPopupsCount === 0) {
         body.classList.remove('body--lock'); // Відкриваємо скрол, якщо всі попапи закриті

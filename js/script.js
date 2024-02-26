@@ -1,5 +1,18 @@
 const menuBody = document.querySelector('.menu__body');
 
+const header = document.querySelector('header')
+
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > header.offsetHeight) {
+        document.body.style.marginTop = header.offsetHeight + 'px'
+        header.classList.add('fixed')
+    } else {
+        header.classList.remove('fixed')
+        document.body.removeAttribute('style')
+
+    }
+})
 
 const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
@@ -97,7 +110,7 @@ function updateOpacityVertical() {
 
 // Event listeners
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('header__burger')) {
+    if (e.target.closest('.header__burger') || e.target.closest('.header__menu-cancel')) {
         e.preventDefault()
         toggleMenu()
     }
@@ -150,11 +163,13 @@ document.addEventListener('click', (e) => {
 
 
 
+
+
 function toggleMenu() {
     const btn = document.querySelector('.header__burger');
     menuBody.classList.toggle('active');
     btn.classList.toggle('active');
-    btn.classList.contains('active') ? document.body.classList.add('scroll--block') : document.body.classList.remove('scroll--block')
+    btn.classList.contains('active') ? document.body.classList.add('body--lock') : document.body.classList.remove('body--lock')
 }
 
 
