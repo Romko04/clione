@@ -3,6 +3,7 @@ const swiperElement1 = document.querySelector('.swiper--products');
 if (swiperElement1) {
     const swiper = new Swiper(swiperElement1, {
         slidesPerView: 1,
+        spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination',
         },
@@ -82,6 +83,7 @@ const swiperElement6 = document.querySelector('.products__slider--plamine__cosme
 if (swiperElement6) {
     const swiper6 = new Swiper(swiperElement6, {
         slidesPerView: 1,
+        spaceBetween: 10,
         navigation: {
             nextEl: '.swiper-button-next--cosmeticks',
             prevEl: '.swiper-button-prev--cosmeticks',
@@ -101,6 +103,7 @@ const swiperElement7 = document.querySelector('.products__slider--plamine__acces
 if (swiperElement7) {
     const swiper7 = new Swiper(swiperElement7, {
         slidesPerView: 1,
+        spaceBetween: 10,
         navigation: {
             nextEl: '.swiper-button-next--accessories',
             prevEl: '.swiper-button-prev--accessories',
