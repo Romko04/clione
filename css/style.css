@@ -3972,6 +3972,9 @@ display: none;
     .header__container{
         position: relative;
     }
+    .header{
+        border-bottom: 0;
+    }
     .header__container::after{
         content: '';
         position: absolute;
