@@ -1747,8 +1747,8 @@ footer .socials a {
 }
 
 .popup__close-svg {
-    width: 4.8rem;
-    height: 5rem;
+    width: 3.4rem;
+    height: 3.5rem;
 }
 
 .quantity__input {
@@ -3969,8 +3969,22 @@ display: none;
 
 
 @media (max-width: 1024px) {
+    .header__container{
+        position: relative;
+    }
+    .header__container::after{
+        content: '';
+        position: absolute;
+        z-index: 4;
+        inset: 0;
+        background-color: #fff;
+        border-bottom: 1px solid var(--default-black);
+    }
 
-    .menu__content-top::after{
+    .field__wrapper input, .field__wrapper textarea{
+        font-size: 1.4rem;
+    }
+    /* .menu__content-top::after{
         content: '';
         position: absolute;
         left: -1.5rem;
@@ -3979,7 +3993,7 @@ display: none;
         top: 5.6rem;
         background-color: var(--default-black);
 
-    }
+    } */
     .menu__content-top {
         padding-top: 9.6rem;
         position: relative;
@@ -4475,7 +4489,7 @@ color: var(--default-black);
     }
 
     .ticker-animation {
-        padding-right: 3rem !important;
+        padding-right: 1.8rem !important;
     }
 
     .ticker__wrapper {
@@ -4774,7 +4788,7 @@ color: var(--default-black);
     }
 
     .popup__close {
-        top: 3.2rem;
+        top: 4rem;
         right: 3rem;
     }
 

@@ -172,6 +172,9 @@ function toggleMenu() {
     btn.classList.contains('active') ? document.body.classList.add('body--lock') : document.body.classList.remove('body--lock')
 }
 
+// Викликаємо функцію оновлення позиції хедера при необхідності
+
+
 
 const sliders = document.querySelectorAll('.slider');
 
