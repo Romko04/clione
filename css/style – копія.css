@@ -5901,9 +5901,3 @@ color: var(--default-black);
         border: 0.1rem solid var(--default-black);
     }
 }
-
-
-
-.bfaf__container{
-    padding-right: 0;
-}

@@ -20,18 +20,20 @@ if (swiperElement1) {
     });
 }
 
-const swiperElement2 = document.querySelector('.swiper--comparator__mobile');
+const swiperElement2 = document.querySelector('.bfaf__slider');
 if (swiperElement2) {
     const swiper2 = new Swiper(swiperElement2, {
-        slidesPerView: 1,
-        pagination: {
-            el: '.swiper-pagination',
+        slidesPerView: 2,
+        spaceBetween: 20,
+        breakpoints: {
+            1024: {
+                slidesPerView: 4.2,
+            }
         },
         navigation: {
-            nextEl: '.swiper-button-next--comparator',
-            prevEl: '.swiper-button-prev--comparator',
+            nextEl: '.swiper-button-next--bfaf',
+            prevEl: '.swiper-button-prev--bfaf',
         },
-        allowTouchMove: false,
     });
 }
 
